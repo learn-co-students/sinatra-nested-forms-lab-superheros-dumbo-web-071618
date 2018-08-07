@@ -12,7 +12,7 @@ class App < Sinatra::Base
         @hero= params[:team][:member].map do |m| 
             Hero.new(m)               
         end 
-        puts "================================"
+       
         p params
         @team  = Team.new(name: params[:team][:name], motto: params[:team][:motto])
         erb :team
